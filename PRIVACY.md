@@ -32,8 +32,8 @@ Nameless World 는 **사용자의 PC 안에서 도는 게임**입니다. 계정 
 **출근 도장 장소의 전국 숫자** — 「출근 도장」 장소에 있는 동안 `office-count.swbins.workers.dev`(만든 사람이 Cloudflare Workers 에 둔 다른 서버)에서 「오늘 출근 도장을 찍은 사람 수」를 1분마다 받아 보여 줍니다.
 앱에서는 받기만 하고, 내 출근 · 퇴근 기록은 이 서버에 보내지 않습니다(기록은 이 PC 안에만).
 
-**내용 업데이트** — 앱을 켜고 15초쯤 뒤, `https://swbins.github.io/apps/world/manifest.json`(내용 목록)을 한 번 받아 봅니다.
-목록이 앱 안의 것보다 새것이면, 바뀐 파일만 같은 사이트(`swbins.github.io`)에서 받습니다. 받은 파일은 목록에 적힌 SHA256 값과 맞을 때만 씁니다.
+**내용 업데이트** — 앱을 켜고 15초쯤 뒤, `https://github.com/swbins/nameless-world/releases/download/content/manifest.json`(내용 목록 — 이 저장소의 「content」 릴리스 첨부)을 한 번 받아 봅니다.
+목록이 앱 안의 것보다 새것이면, 바뀐 파일만 같은 릴리스 첨부에서 받습니다. 받은 파일은 목록에 적힌 SHA256 값과 맞을 때만 씁니다.
 이때 보내는 것은 파일 요청뿐입니다. 사이트는 GitHub Pages 에 있어서, GitHub 쪽에는 일반 웹 접속처럼 IP 주소가 남을 수 있습니다.
 업데이트 확인을 끄려면 환경변수 `GAMES_NO_UPDATE=1` 을 두고 실행하세요.
 
